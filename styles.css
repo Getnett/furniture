@@ -1,0 +1,239 @@
+:root{
+    --header:#B0D5D8;
+    --ingridChairBg:#F5F5F5;
+    --armChairBg:#F5F5F5;
+    --whiteChairBg:#ADD4FF;
+    --graySofaBg:#EBD9D9;
+    --blackChairBg:#F5F5F5;
+    --grayChairBg:#F5F5F5;
+    --whiteSofaBg:#E6E2F0;
+    --showMoreBtnBg:#F5F5F5;
+    --navbar:#FFFFFF;
+    --shopColor:#707070;
+
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+ #header{
+     width: 100%;
+     display:flex;
+     flex-direction: column;
+}
+
+#nav-wrapper{
+    width:100%;
+    background-color: var(--navbar);
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index:1 ;
+}
+nav{
+    margin:0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+
+ }
+ #logo{
+    font-weight: 300;
+}
+nav ul{
+    display:flex;
+    list-style: none;
+}
+nav ul li{
+    margin:0 .4rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+#shop-link:active{
+   color:var(--shopColor);
+}
+
+#shop-icon  img{
+     align-self: center;
+     width:20px;
+     height: 20px;  
+     transform: translateY(-3px);
+}
+.slider{
+    height:560px;
+     margin-top:60px;
+     background-color: var(--header);
+     display: flex;
+     flex-wrap: wrap;
+     align-items: flex-end;
+     justify-content:space-around;
+   
+}
+.slide-section{
+    margin-bottom: 120px;
+}
+.about-furniture h2{
+  font-weight:300;
+  line-height:8px;
+}
+.about-furniture button{
+     padding:8px 40px;
+     border-style: none;
+     border-radius: 16px;
+     background-color: white;
+     text-align: center;
+     outline: none;
+  }
+.furniture-img img{
+    max-width:400px;
+    max-height:400px;
+}
+.slider-arrows{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.arrow{
+    width:50px;
+    height:50px;
+}
+.slider-dash-line{
+    display: inline-block;
+    width:16px;
+    height:2px;
+    background-color:white ;
+    margin:0 6px;
+  }
+  #gray-dash-line{
+      background-color: gray;
+  }
+ main{
+     margin:0 8rem;
+  }
+  .title{
+      text-align: center;
+      margin:50px 0;
+  }
+  .title h1{
+      font-style: italic;
+      font-weight:600;
+  }
+  #title-gray{
+      font-weight:100;
+      color:var(--shopColor);
+  }
+
+  /* featured products */
+  .featured-products{
+      width:100%;
+      display: grid;
+      grid-template-columns:auto auto auto;
+      grid-template-rows: auto auto auto ;
+      grid-auto-flow: row ;
+      grid-gap: 6px;
+ }
+ .featured-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+  #product-one{
+      background-color: var(--ingridChairBg);
+      }
+  #product-two{
+    background-color: var(--armChairBg);
+ }
+#product-three{
+    background-color: var(--whiteChairBg);
+   }
+#product-four{
+    background-color: var(--graySofaBg);
+    grid-column: span 2;
+ }
+#product-five{
+    background-color: var(--blackChairBg);
+   }
+#product-six{
+    background-color: var(--grayChairBg);
+   }
+  #product-seven{
+      background-color: var(--whiteSofaBg);
+      grid-column:2/4;
+}
+
+  #product-four img
+  {
+     width:505px;
+}
+#product-seven img{
+     width:560px;
+}
+.show-more{
+    text-align: center;
+    margin:50px 0 ;
+}
+.show-more button{
+      background-color: var(--showMoreBtnBg);
+      outline:none;
+      border-style: none;
+      border-radius:32px;
+      padding: 16px 80px;
+      cursor: pointer;
+}
+.featured-product h6{
+    /* position: relative; */
+}
+#gray-circle{
+       display: inline-block;
+       width:40px;
+       height:40px;
+       border-radius:50%;
+       background-color:rgba(255,255,255,0.5);
+       transform: translate(20px,15px);
+      
+    }
+#product-four h6,
+#product-seven h6{
+  align-self:flex-end;
+  margin-right:100px;
+}
+@media  (max-width:1024px) {
+    main{
+        margin:0;
+    }
+   .featured-products{
+       grid-template-columns: auto;
+       grid-auto-flow: row dense;
+   }
+   #product-four,
+   #product-seven{
+     grid-column:span 1;
+    display: flex;
+  }
+.furniture-img img{
+    width:200px;
+}
+.slider{
+    height: 80%;
+    display: grid;
+    grid-template-rows:auto auto auto;
+    grid-row-gap:1rem;
+}
+.about-furniture{
+   grid-row:2/3 ;
+   justify-self: center;
+}
+
+}
+
+
+ 
